@@ -11,8 +11,8 @@ import {
 import { flushSync } from "react-dom"
 import type { Theme, ResolvedTheme } from "@/shared/types"
 
-const STORAGE_KEY = "fujura-theme"
-const COOKIE_KEY = "fujura-theme"
+const STORAGE_KEY = "fujuro-theme"
+const COOKIE_KEY = "fujuro-theme"
 const COOKIE_MAX_AGE = 31536000
 
 function setThemeCookie(resolved: ResolvedTheme) {

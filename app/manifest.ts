@@ -3,7 +3,7 @@ import { MetadataRoute } from "next"
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Dzhalil Kalimov - Frontend Developer",
-    short_name: "Fujura",
+    short_name: "fujuro",
     description: "Frontend Engineer with 3+ years of experience in Web3 and Enterprise solutions",
     start_url: "/ru",
     display: "standalone",

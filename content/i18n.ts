@@ -8,19 +8,19 @@ export const defaultLocale: Locale = "ru"
 export const content = {
   ru: {
     name: "Джалиль Калимов",
-    role: "Frontend Developer",
+    role: "Frontend разработчик (Vue.js 3 / React.js)",
     tagline:
-      "Frontend Engineer с 3-летним опытом разработки высоконагруженных Web3 и Enterprise решений. Эксперт в React/Next.js. Специализируюсь на оптимизации производительности и сложных интеграциях.",
+      "Frontend-разработчик с 3-летним опытом в Fintech (банковский сектор) и Web3. Разрабатываю микрофронтенды на Single-SPA (Vue 3) для внутренних систем банка (300 000+ клиентов) и высоконагруженные решения на React/Next.js. Специализируюсь на оптимизации производительности и сложных интеграциях.",
     about: {
       title: "О себе",
       description:
-        "Frontend Engineer с 3-летним коммерческим опытом. Разрабатываю высоконагруженные решения в Web3, Enterprise и админ-платформах. Фокус на измеримых результатах: SEO, retention, конверсия.",
+        "Frontend-разработчик с 3-летним коммерческим опытом в банковском Fintech и Web3. Разрабатываю микрофронтенды на Single-SPA (Vue 3) и высоконагруженные решения на React/Next.js. Фокус на измеримых результатах: производительность, SEO, retention.",
       highlights: [
         "3+ года коммерческого опыта",
-        "Web3, Enterprise, Admin platforms",
-        "15x ускорение сборки",
+        "Fintech, Web3, Enterprise",
+        "10x ускорение сборки",
         "+23% SEO трафика",
-        "+28% retention",
+        "300 000+ клиентов банка",
       ],
     },
     skills: {
@@ -31,6 +31,19 @@ export const content = {
     },
     experience: {
       title: "Опыт",
+      kmfbank: {
+        company: "АО «KMF Банк»",
+        subtitle: "Коммерческий банк, 300 000+ клиентов · Алматы",
+        period: "Апр 2026 – наст. время",
+        duration: "3+ мес",
+        role: "Frontend разработчик",
+        points: [
+          "4+ модуля вынесено в микрофронтенды на Single-SPA (Vue 3)",
+          "Интеграция со SmartBridge — гос. платформой обмена данными",
+          "Интеграционные тесты на Vitest и MSW",
+          "Scrum, 2-недельные спринты, департамент из 40+ специалистов",
+        ],
+      },
       stakeme: {
         company: "STAKEME LLC",
         subtitle: "Blockchain, 18,000+ пользователей, 35+ сетей · Удалённо",
@@ -39,7 +52,7 @@ export const content = {
         role: "Frontend разработчик",
         points: [
           "SEO оптимизация → рост выручки",
-          "15x ускорение сборки (Next.js 14→15, Turbopack)",
+          "10x ускорение сборки (Next.js 14→15, Turbopack)",
           "Интеграция MetaMask, Keplr, crypto wallets",
           "Design system, код-ревью, рефакторинг legacy",
         ],
@@ -63,7 +76,7 @@ export const content = {
         duration: "1 год 2 мес",
         role: "Frontend разработчик",
         points: [
-          "Attendix: QR-посещаемость, +40% attendance",
+          "Attendix: QR-посещаемость, +26% attendance",
           "500+ пользователей, RBAC, real-time мониторинг",
           "6+ проектов: web apps, Telegram bots",
         ],
@@ -79,10 +92,11 @@ export const content = {
       worldskillsAlmaty: "1 место WorldSkills Almaty, Веб-технологии",
       worldskillsKz: "2 место WorldSkills Kazakhstan, Веб-технологии",
       hackathon: "Halyk Bank OIY Hackathon",
+      security: "Курс «Информационная безопасность», Zhejiang College",
       metrics: {
-        build: "15x",
+        build: "10x",
         seo: "+23%",
-        retention: "+28%",
+        retention: "+13%",
       },
     },
     contact: {
@@ -108,19 +122,19 @@ export const content = {
   },
   en: {
     name: "Dzhalil Kalimov",
-    role: "Frontend Developer",
+    role: "Frontend Developer (Vue.js 3 / React.js)",
     tagline:
-      "Frontend Engineer with 3 years of experience building high-load Web3 and Enterprise solutions. Expert in React/Next.js. Specialized in performance optimization and complex integrations.",
+      "Frontend Developer with 3 years of experience in Fintech (banking sector) and Web3. I build Single-SPA microfrontends (Vue 3) for internal banking systems (300,000+ clients) and high-load React/Next.js solutions. Specialized in performance optimization and complex integrations.",
     about: {
       title: "About",
       description:
-        "Frontend Engineer with 3+ years of commercial experience. Building high-load solutions in Web3, Enterprise, and admin platforms. Focus on measurable outcomes: SEO, retention, conversion.",
+        "Frontend Developer with 3+ years of commercial experience in banking Fintech and Web3. Building Single-SPA microfrontends (Vue 3) and high-load React/Next.js solutions. Focus on measurable outcomes: performance, SEO, retention.",
       highlights: [
         "3+ years commercial experience",
-        "Web3, Enterprise, Admin platforms",
-        "15x build speed improvement",
+        "Fintech, Web3, Enterprise",
+        "10x build speed improvement",
         "+23% SEO traffic",
-        "+28% retention",
+        "300,000+ bank clients",
       ],
     },
     skills: {
@@ -131,6 +145,19 @@ export const content = {
     },
     experience: {
       title: "Experience",
+      kmfbank: {
+        company: "KMF Bank JSC",
+        subtitle: "Commercial bank, 300,000+ clients · Almaty",
+        period: "Apr 2026 – Present",
+        duration: "3+ mo",
+        role: "Frontend Developer",
+        points: [
+          "4+ modules extracted into Single-SPA microfrontends (Vue 3)",
+          "SmartBridge integration — government data exchange platform",
+          "Integration tests with Vitest and MSW",
+          "Scrum, two-week sprints, 40+ specialist department",
+        ],
+      },
       stakeme: {
         company: "STAKEME LLC",
         subtitle: "Blockchain, 18,000+ users, 35+ networks · Remote",
@@ -139,7 +166,7 @@ export const content = {
         role: "Frontend Developer",
         points: [
           "SEO optimization → revenue growth",
-          "15x build speed (Next.js 14→15, Turbopack)",
+          "10x build speed (Next.js 14→15, Turbopack)",
           "MetaMask, Keplr, crypto wallets integration",
           "Design system, code review, legacy refactoring",
         ],
@@ -163,7 +190,7 @@ export const content = {
         duration: "1 yr 2 mo",
         role: "Frontend Developer",
         points: [
-          "Attendix: QR attendance, +40% attendance",
+          "Attendix: QR attendance, +26% attendance",
           "500+ users, RBAC, real-time monitoring",
           "6+ projects: web apps, Telegram bots",
         ],
@@ -179,10 +206,11 @@ export const content = {
       worldskillsAlmaty: "1st Place WorldSkills Almaty, Web Technologies",
       worldskillsKz: "2nd Place WorldSkills Kazakhstan, Web Technologies",
       hackathon: "Halyk Bank OIY Hackathon",
+      security: "Course: Applied Information Security, Zhejiang College",
       metrics: {
-        build: "15x",
+        build: "10x",
         seo: "+23%",
-        retention: "+28%",
+        retention: "+13%",
       },
     },
     contact: {

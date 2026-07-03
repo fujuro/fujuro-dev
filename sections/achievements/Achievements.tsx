@@ -65,6 +65,9 @@ export function Achievements() {
               <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">
                 {t.achievements.hackathon}
               </p>
+              <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">
+                {t.achievements.security}
+              </p>
             </GlassCard>
           </div>
         </div>

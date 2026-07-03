@@ -65,4 +65,4 @@ npm start
 
 ## Author
 
-**Dzhalil Kalimov** — [GitHub](https://github.com/Fujura) · [LinkedIn](https://www.linkedin.com/in/dzhalil-kalimov-41b5bb29b/) · [Telegram](https://t.me/fujura)
+**Dzhalil Kalimov** — [GitHub](https://github.com/fujuro) · [LinkedIn](https://www.linkedin.com/in/fujuro) · [Telegram](https://t.me/fujura)

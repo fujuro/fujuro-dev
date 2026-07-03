@@ -1,6 +1,6 @@
 export const LINKS = {
-  github: "https://github.com/Fujura",
-  linkedin: "https://www.linkedin.com/in/dzhalil-kalimov-41b5bb29b/",
+  github: "https://github.com/fujuro",
+  linkedin: "https://www.linkedin.com/in/fujuro",
   telegram: "https://t.me/fujura",
   email: "mailto:fujuroa@gmail.com",
 } as const
@@ -12,23 +12,24 @@ export const CV_PATHS = {
 
 export const SKILLS = {
   frontend: [
-    "HTML",
-    "CSS",
+    "HTML5",
+    "CSS3",
     "SASS/SCSS",
     "Tailwind CSS",
-    "Bootstrap",
     "JavaScript",
     "TypeScript",
     "React",
+    "Next.js (App Router, SSR/SSG/SPA)",
+    "Vue 3 (Composition API)",
+    "Vue Router",
     "Redux",
     "Zustand",
-    "Next.js",
-    "React Hooks",
-    "SPA/SSR/SSG",
-    "Responsive",
-    "a11y",
-    "Storybook",
+    "Pinia",
     "shadcn/ui",
+    "PrimeVue",
+    "Storybook",
+    "a11y",
+    "Microfrontends (Single-SPA)",
     "Web3 (ethers.js, wallets)",
   ],
   tooling: [
@@ -50,15 +51,17 @@ export const SKILLS = {
     "Auth/RBAC",
     "Jest",
     "React Testing Library",
+    "Vitest",
+    "Mock Service Worker",
   ],
 } as const
 
 export const PROJECTS = [
   {
-    name: "fujura-dev",
+    name: "fujuro-dev",
     description: "Personal portfolio site. Next.js, Tailwind, glassmorphism design.",
     stack: ["Next.js", "React", "TypeScript", "Tailwind"],
-    href: "https://github.com/Fujura/fujura-dev",
+    href: "https://github.com/fujuro/fujuro-dev",
     demo: null,
   },
 ]

@@ -67,7 +67,7 @@ export async function generateMetadata({
       title: `${t.name} | ${t.role}`,
       description: t.tagline,
       images: [`${baseUrl}/opengraph.png`],
-      creator: "@fujura",
+      creator: "@fujuro",
     },
     alternates: {
       canonical: `${baseUrl}/${locale}`,
@@ -113,7 +113,7 @@ export default async function LocaleLayout({
   }
 
   const cookieStore = await cookies()
-  const themeCookie = cookieStore.get("fujura-theme")?.value
+  const themeCookie = cookieStore.get("fujuro-theme")?.value
   const themeClass = themeCookie === "dark" || themeCookie === "light" ? themeCookie : ""
   const jsonLd = generateProfilePageSchema(locale as Locale)
 

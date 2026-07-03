@@ -5,7 +5,12 @@ import { AnimateOnScroll, GlassCard } from "@/shared/components"
 
 export function Experience() {
   const { t } = useI18n()
-  const jobs = [t.experience.stakeme, t.experience.dragau, t.experience.apc]
+  const jobs = [
+    t.experience.kmfbank,
+    t.experience.stakeme,
+    t.experience.dragau,
+    t.experience.apc,
+  ]
 
   return (
     <AnimateOnScroll>

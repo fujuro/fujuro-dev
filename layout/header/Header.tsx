@@ -26,7 +26,7 @@ export function Header() {
 	const cycleTheme = () => {
 		const themes: Theme[] = ["light", "dark", "system"];
 		const currentTheme =
-			(localStorage.getItem("fujura-theme") as Theme) || "system";
+			(localStorage.getItem("fujuro-theme") as Theme) || "system";
 		const systemIsDark = window.matchMedia(
 			"(prefers-color-scheme: dark)"
 		).matches;
