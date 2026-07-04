@@ -1,8 +1,10 @@
+export const EMAIL = "fujuroa@gmail.com"
+
 export const LINKS = {
   github: "https://github.com/fujuro",
   linkedin: "https://www.linkedin.com/in/fujuro",
   telegram: "https://t.me/fujura",
-  email: "mailto:fujuroa@gmail.com",
+  email: `mailto:${EMAIL}`,
 } as const
 
 export const CV_PATHS = {

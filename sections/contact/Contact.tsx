@@ -2,11 +2,11 @@
 
 import { useI18n } from "@/providers/i18n"
 import { AnimateOnScroll, GlassCard } from "@/shared/components"
-import { LINKS, CV_PATHS } from "@/shared/constants"
-import { MailIcon, GithubIcon, LinkedinIcon, TelegramIcon } from "@/shared/icons"
+import { LINKS, CV_PATHS, EMAIL } from "@/shared/constants"
+import { useCopyToClipboard } from "@/shared/hooks"
+import { MailIcon, GithubIcon, LinkedinIcon, TelegramIcon, CheckIcon } from "@/shared/icons"
 
-const contactLinks = [
-  { href: LINKS.email, icon: MailIcon, label: "fujuroa@gmail.com" },
+const socialLinks = [
   { href: LINKS.github, icon: GithubIcon, label: "GitHub" },
   { href: LINKS.linkedin, icon: LinkedinIcon, label: "LinkedIn" },
   { href: LINKS.telegram, icon: TelegramIcon, label: "Telegram" },
@@ -14,6 +14,7 @@ const contactLinks = [
 
 export function Contact() {
   const { t, locale } = useI18n()
+  const { copied, copy } = useCopyToClipboard()
 
   return (
     <AnimateOnScroll>
@@ -27,12 +28,26 @@ export function Contact() {
               {t.contact.cta}
             </p>
             <div className="flex flex-wrap justify-center gap-6 mb-8">
-              {contactLinks.map(({ href, icon: Icon, label }) => (
+              <button
+                type="button"
+                onClick={() => copy(EMAIL)}
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border
+                  border-zinc-300 text-zinc-800 dark:border-zinc-700 dark:text-zinc-300
+                  hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
+              >
+                {copied ? (
+                  <CheckIcon className="size-5 text-green-600 dark:text-green-400" />
+                ) : (
+                  <MailIcon />
+                )}
+                {copied ? t.contact.copied : EMAIL}
+              </button>
+              {socialLinks.map(({ href, icon: Icon, label }) => (
                 <a
                   key={label}
                   href={href}
-                  target={href.startsWith("mailto") ? undefined : "_blank"}
-                  rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border
                     border-zinc-300 text-zinc-800 dark:border-zinc-700 dark:text-zinc-300
                     hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"

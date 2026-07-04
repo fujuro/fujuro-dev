@@ -89,19 +89,36 @@ export const content = {
     },
     achievements: {
       title: "Достижения",
-      worldskillsAlmaty: "1 место WorldSkills Almaty, Веб-технологии",
-      worldskillsKz: "2 место WorldSkills Kazakhstan, Веб-технологии",
-      hackathon: "Halyk Bank OIY Hackathon",
-      security: "Курс «Информационная безопасность», Zhejiang College",
       metrics: {
         build: "10x",
         seo: "+23%",
         retention: "+13%",
       },
+      items: [
+        { title: "WorldSkills Almaty", detail: "1 место, Веб-технологии" },
+        { title: "WorldSkills Kazakhstan", detail: "2 место, Веб-технологии" },
+        { title: "Halyk Bank OIY", detail: "Хакатон" },
+        { title: "Информационная безопасность", detail: "Курс, Zhejiang College" },
+      ],
     },
     contact: {
       title: "Связаться",
       cta: "Открыт к предложениям. Напишите — обсудим ваш проект.",
+      copied: "Скопировано!",
+    },
+    commandPalette: {
+      placeholder: "Поиск команд и разделов…",
+      empty: "Ничего не найдено",
+      groups: {
+        navigate: "Навигация",
+        theme: "Тема",
+        actions: "Действия",
+        connect: "Связь",
+      },
+      themeLight: "Светлая тема",
+      themeDark: "Тёмная тема",
+      themeSystem: "Системная тема",
+      switchLocale: "Сменить язык",
     },
     footer: {
       copyright: "©",
@@ -203,19 +220,36 @@ export const content = {
     },
     achievements: {
       title: "Achievements",
-      worldskillsAlmaty: "1st Place WorldSkills Almaty, Web Technologies",
-      worldskillsKz: "2nd Place WorldSkills Kazakhstan, Web Technologies",
-      hackathon: "Halyk Bank OIY Hackathon",
-      security: "Course: Applied Information Security, Zhejiang College",
       metrics: {
         build: "10x",
         seo: "+23%",
         retention: "+13%",
       },
+      items: [
+        { title: "WorldSkills Almaty", detail: "1st Place, Web Technologies" },
+        { title: "WorldSkills Kazakhstan", detail: "2nd Place, Web Technologies" },
+        { title: "Halyk Bank OIY", detail: "Hackathon" },
+        { title: "Applied Information Security", detail: "Course, Zhejiang College" },
+      ],
     },
     contact: {
       title: "Contact",
       cta: "Open to opportunities. Reach out — let's discuss your project.",
+      copied: "Copied!",
+    },
+    commandPalette: {
+      placeholder: "Search actions or sections…",
+      empty: "No results found",
+      groups: {
+        navigate: "Navigate",
+        theme: "Theme",
+        actions: "Actions",
+        connect: "Connect",
+      },
+      themeLight: "Light theme",
+      themeDark: "Dark theme",
+      themeSystem: "System theme",
+      switchLocale: "Switch language",
     },
     footer: {
       copyright: "©",

@@ -6,22 +6,17 @@ import { useTheme } from "@/providers/theme";
 import type { Theme } from "@/shared/types";
 import { useI18n } from "@/providers/i18n";
 import { locales } from "@/content";
-import { SunIcon, MoonIcon, MenuIcon, CloseIcon } from "@/shared/icons";
-
-const navIds = [
-	{ id: "about", key: "about" as const },
-	{ id: "skills", key: "skills" as const },
-	{ id: "experience", key: "experience" as const },
-	{ id: "projects", key: "projects" as const },
-	{ id: "achievements", key: "achievements" as const },
-	{ id: "contact", key: "contact" as const },
-];
+import { NAV_SECTIONS } from "@/shared/constants";
+import { SunIcon, MoonIcon, MenuIcon, CloseIcon, SearchIcon } from "@/shared/icons";
+import { useActiveSection } from "@/shared/hooks";
+import { openCommandPalette } from "@/layout/command-palette";
 
 export function Header() {
 	const { setThemeWithTransition, resolved, mounted } = useTheme();
 	const { t, locale } = useI18n();
 	const [open, setOpen] = useState(false);
 	const themeButtonRef = useRef<HTMLButtonElement>(null);
+	const activeId = useActiveSection(NAV_SECTIONS.map(({ id }) => id));
 
 	const cycleTheme = () => {
 		const themes: Theme[] = ["light", "dark", "system"];
@@ -77,11 +72,16 @@ export function Header() {
 				</Link>
 
 				<nav className="hidden md:flex items-center gap-1">
-					{navIds.map(({ id, key }) => (
+					{NAV_SECTIONS.map(({ id, key }) => (
 						<button
 							key={id}
 							onClick={() => scrollTo(id)}
-							className="px-3 py-2 text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors rounded-lg cursor-pointer"
+							aria-current={activeId === id ? "true" : undefined}
+							className={`px-3 py-2 text-sm transition-colors rounded-lg cursor-pointer ${
+								activeId === id
+									? "text-zinc-900 dark:text-white font-medium"
+									: "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+							}`}
 						>
 							{t.nav[key]}
 						</button>
@@ -89,6 +89,16 @@ export function Header() {
 				</nav>
 
 				<div className="flex items-center gap-2">
+					<button
+						type="button"
+						onClick={openCommandPalette}
+						className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 text-xs text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-white/5 transition-colors cursor-pointer"
+						aria-label="Open command palette"
+					>
+						<SearchIcon className="size-3.5" />
+						<span>⌘K</span>
+					</button>
+
 					<button
 						ref={themeButtonRef}
 						onClick={cycleTheme}
@@ -135,11 +145,16 @@ export function Header() {
 			{open && (
 				<div className="md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
 					<nav className="flex flex-col p-4 gap-1 cursor-pointer">
-						{navIds.map(({ id, key }) => (
+						{NAV_SECTIONS.map(({ id, key }) => (
 							<button
 								key={id}
 								onClick={() => scrollTo(id)}
-								className="py-3 text-left text-zinc-700 dark:text-zinc-300"
+								aria-current={activeId === id ? "true" : undefined}
+								className={`py-3 text-left transition-colors ${
+									activeId === id
+										? "text-zinc-900 dark:text-white font-medium"
+										: "text-zinc-700 dark:text-zinc-300"
+								}`}
 							>
 								{t.nav[key]}
 							</button>
